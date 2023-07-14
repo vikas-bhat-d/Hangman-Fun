@@ -131,14 +131,9 @@ def game(randword): #main game logic is written here
                 
                     for i in range(0,len(lrandword)):
                         if(str(lrandword[i])==str(ans)):
-                            if (lrandword[i]!=lrandword[a] and lrandword[i]!=lrandword[b]):
-                                 global value
-                                 value=i
-                                 compword[value]=ans 
-                                 
-                            else:
-                                value=i
-                                compword[value]=ans 
+                            
+                            value=i
+                            compword[value]=ans 
                             guessed_letters.append(ans)
                             
                             compword_="".join(compword)
