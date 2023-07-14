@@ -5,7 +5,7 @@ randword=random.choice(word_list).upper()
 #c=1
 
 
-def frequency(randword):
+def frequency(randword): #To find the frequnecy of a perticular letter in a randomly chosen word
     dic_freq={}
     for i in randword:
         if i in dic_freq:
@@ -88,18 +88,18 @@ def stages(tries):
 
 
 
-def game(randword):
+def game(randword): #main game logic is written here
     global a
     global b
     tries=6
     freq={}
     result="loose"
     guessed=False
-    guessed_letters=[]
+    guessed_letters=[] #To store already guessed letters
     lrandword=list(randword)
     word_completed='-'*len(lrandword)
     #print(word_completed)
-    compword=list(word_completed)
+    compword=list(word_completed)#this variable holds the progress we made guessing the word as list
     a=random.randint(0,len(lrandword)-1)
     try_=False
     while (try_==False):
@@ -108,9 +108,9 @@ def game(randword):
             try_=False
         else:
             try_=True
-    compword[a]=lrandword[a]
-    compword[b]=lrandword[b]
-    compword_="".join(compword)
+    compword[a]=lrandword[a] #it will randomly assign a letter into compword as a hint
+    compword[b]=lrandword[b] #it will randomly assign another letter into compword as a hint
+    compword_="".join(compword)#this joins to list elements into single string
     guessed_letters.append(lrandword[a])
     guessed_letters.append(lrandword[b])
     print("\n\n",compword_,"\n\n") #display mechanism
@@ -118,8 +118,8 @@ def game(randword):
     
 
 
- 
-    while guessed==False and (tries>0):
+    
+    while guessed==False and (tries>0): 
         ans=input("Please guess letter or word:").upper()
         if(len(ans)==1 and ans.isalpha()):
             if(ans in guessed_letters):
