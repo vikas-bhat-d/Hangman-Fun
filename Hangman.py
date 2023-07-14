@@ -177,7 +177,7 @@ def game(randword): #main game logic is written here
                                 result="win"
                                
                     
-        #elif(len(ans)==len(randword)):
+        
 
         else:
             print("invalid entry")
