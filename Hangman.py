@@ -133,8 +133,7 @@ def game(randword):
                                  #compword[value]=ans 
                                  
                             #else:
-                            value=i
-                            compword[value]=ans 
+                            compword[i]=ans 
                             guessed_letters.append(ans)
                             
                             compword_=" ".join(compword)
@@ -166,8 +165,7 @@ def game(randword):
                 for i in range(0,len(lrandword)):
                     if(str(lrandword[i])==str(ans)):
                         
-                        value=i
-                        compword[value]=ans
+                        compword[i]=ans
                         compword_=" ".join(compword)
                         print(compword_)  
                         stages(tries)
