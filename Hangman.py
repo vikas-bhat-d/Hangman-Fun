@@ -182,5 +182,6 @@ def main():
     randword=random.choice(word_list).upper()
     game(randword)
 main()
-while(response=='Y'):
+while(response=="Y"):
     main()
+
