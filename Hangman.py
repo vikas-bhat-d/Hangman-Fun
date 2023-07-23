@@ -127,12 +127,6 @@ def game(randword):
                 
                     for i in range(0,len(lrandword)):
                         if(str(lrandword[i])==str(ans)):
-                            #if (lrandword[i]!=lrandword[a] and lrandword[i]!=lrandword[b]):
-                                 #global value
-                                 #value=i
-                                 #compword[value]=ans 
-                                 
-                            #else:
                             compword[i]=ans 
                             guessed_letters.append(ans)
                             
@@ -142,7 +136,7 @@ def game(randword):
                             if(compword==lrandword):
                                 print("Congratulations:) you win!")
                                 guessed=True
-                                result="win"
+                               
                                 
                                 
                      
@@ -186,7 +180,7 @@ def game(randword):
 def main():
     
     randword=random.choice(word_list).upper()
-    #print(lrandword)
-    #c=1
-
     game(randword)
+main()
+while(response=='Y'):
+    main()
